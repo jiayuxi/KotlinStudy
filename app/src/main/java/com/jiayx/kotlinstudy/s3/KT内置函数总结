@@ -1,0 +1,32 @@
+/*
+* 内置函数的总结
+*/
+TODO Apply 函数 调用者.apply
+1、apply 函数返回类型，永远是'调用者'本身               TODO 此条和 also 一样
+2、apply 函数的匿名函数里持有的 this == '调用者' 本身    TODO 此条和 run 一样
+
+TODO let 函数 调用者.let
+1、let 函数的返回类型，是根据匿名函数的最后一行变化而变化   TODO 此条和 run 一样
+2、let 函数的匿名函数里持有的 it == '调用者' 本身        TODO 此条和 also 一样
+
+TODO run 函数 调用者.run
+1、run 函数的返回类型，是根据匿名函数的最后一行变化而变化  TODO 此条和 let 一样
+2、run 函数的匿名函数里持有的 this == '调用者' 本身     TODO 此条和 apply 一样
+
+TODO with with(调用者) with 和 run 基本一样，只是调用者不同
+1、with 函数返回类型，是根据匿名函数最后一行变化而变化  TODO 此条和 let 一样
+2、with 函数的函数里持有的 this == '调用者' 本身     TODO 此条和 apply 一样
+
+TODO also 调用者.also
+1、also 函数返回类型，永远是 '调用者'本身           TODO 此条和 apply 一样
+2、also 函数的匿名函数里持有的 it == '调用者' 本身  TODO 此条和 let 一样
+
+TODO takeif 内置函数
+1、takeif : 返回值 是 true ，返回调用者本身
+2、takeif : 返回值 是 false, 返回 null 函数
+TODO takeif + 空合并操作符一起使用
+'调用者'.takeif{}?:"空字符串"
+TODO takeifunless 内置函数
+1、takeifunless : 返回值 是 false , 返回调用者本身
+2、takeifunless : 返回值 是 true ，返回 null
+
