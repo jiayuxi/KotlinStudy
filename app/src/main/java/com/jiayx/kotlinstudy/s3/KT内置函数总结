@@ -30,3 +30,42 @@ TODO takeifunless 内置函数
 1、takeifunless : 返回值 是 false , 返回调用者本身
 2、takeifunless : 返回值 是 true ，返回 null
 
+
+TODO ========================== apply 与 also ======================================
+相同点：apply  与 also 返回类型一样，永远都返回调用者本身，匿名函数，最后一行无法作为返回值，不影响函数返回类型
+不同点：apply 函数里 apply{ 持有this对象} ，also 函数里 also{ 持有 it 对象}
+应用点：
+     '调用者'.apply{...}.apply{...}.apply{...} 可以链式调用
+     '调用者'.also{...}.also{...}.also{...}    可以链式调用
+
+TODO =========================== run 与 let =====================================================
+相同点：run 与 let 返回类型， 是一样的，都是根据匿名函数最后一行返回类型而决定，run 与 let 的返回类型(是根据匿名函数的最后一行返回类型决定)
+不同点：run 函数里 run{ 持有 this 对象 } ，let 函数里 let{ 持有 it 对象}
+应用点：
+     '调用者'.run{...}
+     '调用者'.let{...}
+
+     '调用者'.run{ this == '调用者' 本身
+          double
+          float
+          String
+          Char
+          Int
+          Boolean
+     }
+     '调用者'.run{ it == '调用者' 本身
+          double
+          float
+          String
+          Char
+          Int
+          Boolean
+     }
+
+ TODO ==============================run 与 with ========================================
+ 相同点：with 与 run,let 的返回类型是一样的，都会根据匿名函数的最后一行的返回类型而决定
+ 不同点：run 函数 run{持有 this 对象}，let 函数 let{持有 it 对象}，with 函数 with{持有 this 对象}
+ 应用点：
+       '调用者'.run{...}
+       '调用者'.let{...}
+       whit('调用者'){...}
