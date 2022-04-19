@@ -5,7 +5,7 @@ import kotlin.String as String
 /**
  *Created by yuxi_
 on 2022/4/12
-lateinit var 懒加载，手动加载
+TODO lateinit var 懒加载，手动加载
  */
 class KtBase77 {
     lateinit var value: String

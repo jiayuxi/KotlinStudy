@@ -3,7 +3,7 @@ package com.jiayx.kotlinstudy.s4
 /**
  *Created by yuxi_
 on 2022/4/12
- by lazy kotlin 语言的惰性加载，懒加载，自动化加载
+TODO  by lazy kotlin 语言的惰性加载，懒加载，自动化加载
  */
 
 class KtBase78 {

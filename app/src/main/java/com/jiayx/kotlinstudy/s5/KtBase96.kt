@@ -4,9 +4,18 @@ package com.jiayx.kotlinstudy.s5
  *Created by yuxi_
 on 2022/4/14
  todo kotlin 语言 in - 逆变
+ 父类泛型对象可以赋值给子类泛型对象,用in
  */
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>消费者学习
 
+// 消费者 in T 逆变[in T 此泛型能够被修改，更新 所以是 in]
+interface Consumer<in T> {
+    // in T 代表整个消费者类里面，这个 T 只能被修改，不能被读取
+    // 只能被修改
+    fun consumer(item: T)
+    //不能被读取
+//    fun produce() : T
+}
 class ConsumerClass1 : Consumer<Animal> {
     override fun consumer(item: Animal) {
         println("消费者 Animal")

@@ -6,6 +6,7 @@ import java.lang.annotation.AnnotationTypeMismatchException
  *Created by yuxi_
 on 2022/4/14
 todo kotlin 语言out-协变式学习
+小结：子类泛型对象 可以赋值给 父类泛型对象 使用 out
  */
 // 生产者 out T 协变 [out T 此泛型能够被获取，读取 ，所以是 out]
 interface Producer<out T> {
@@ -14,15 +15,6 @@ interface Producer<out T> {
 //    fun consumer(item : T) //
     // 只能被读取
     fun producer(): T
-}
-
-// 消费者 in T 逆变[in T 此泛型能够被修改，更新 所以是 in]
-interface Consumer<in T> {
-    // in T 代表整个消费者类里面，这个 T 只能被修改，不能被读取
-    // 只能被修改
-    fun consumer(item: T)
-    //不能被读取
-//    fun produce() : T
 }
 
 // 生产者&消费者 默认是T 不变

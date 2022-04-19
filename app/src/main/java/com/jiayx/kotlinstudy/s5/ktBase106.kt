@@ -1,5 +1,6 @@
 package com.jiayx.kotlinstudy.s5
 
+import android.icu.text.IDNA
 import java.io.File
 
 /**
@@ -16,6 +17,10 @@ class Context {
 
 inline fun Context.apply5(lambda: Context.(String) -> Unit): Context {
     lambda(info)
+    return this
+}
+inline fun<I> I.apply6(lambda:I.(String) -> Unit):I {
+    lambda("kotlin")
     return this
 }
 
@@ -37,6 +42,13 @@ fun main() {
         toast(it)
         toast(name)
     }
+    println()
+    val lambda: Context.(String) -> Unit = {
+        println("我的 it是：$it ,我的 this 是：$this")
+        toast(it)
+        toast(name)
+    }
+    Context().apply6(lambda)
     println()
     println(context.info)
 

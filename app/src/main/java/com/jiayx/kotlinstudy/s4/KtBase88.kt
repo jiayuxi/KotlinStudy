@@ -4,6 +4,7 @@ package com.jiayx.kotlinstudy.s4
  *Created by yuxi_
 on 2022/4/12
 todo kotlin 枚举类定义函数学习
+代数数据类型(简称 ADT)：可以用来表示一组子类型的闭集。枚举就是一种简单的 ADT
  */
 
 data class LimbsInfo(var limbsInfo: String, var length: Int) {
@@ -36,6 +37,6 @@ fun main() {
     Limbs.RIGHT_FOOT.show()
 
     println()
-    Limbs.LEFT_HAND.updateLimbsInfo(LimbsInfo("左手",99))
+    Limbs.LEFT_HAND.updateLimbsInfo(LimbsInfo("左手", 99))
     Limbs.LEFT_HAND.show()
 }

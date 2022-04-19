@@ -14,6 +14,7 @@ class KtBase94<T>(val isMap: Boolean = false, val inputType: T) {
     inline fun <R> map(mapAction: (T) -> R): R? = mapAction(inputType).takeIf { isMap }
 }
 
+// I 输入参数，O 输出参数
 inline fun <I, O> map(inputType: I, isMap: Boolean = true, lambdaAction: (I) -> O): O? {
     return if (isMap) {
         lambdaAction(inputType)

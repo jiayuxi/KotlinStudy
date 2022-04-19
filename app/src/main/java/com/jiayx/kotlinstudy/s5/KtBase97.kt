@@ -4,6 +4,7 @@ package com.jiayx.kotlinstudy.s5
  *Created by yuxi_
 on 2022/4/15
 todo kotlin 语言 reified 关键字学习
+
  */
 
 data class ObjectClass1(val name: String, val age: Int, val info: String)

@@ -44,7 +44,7 @@ class Outer{
        Nested().outPut()
     }
     class Nested{
-       fun outPut() = println("内部类成员")
+       fun outPut() = println("嵌套内部类成员")
     }
 }
 
@@ -52,5 +52,8 @@ fun main() {
     Body("王五").Heart().run()
     Body("王五").Kidney().run()
     Body("王五").Hand().LiftHand().run()
+    //嵌套类
     Outer().show()
+    // 嵌套类的调用
+    Outer.Nested().outPut()
 }

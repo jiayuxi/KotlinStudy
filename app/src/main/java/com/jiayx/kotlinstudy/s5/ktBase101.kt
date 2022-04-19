@@ -52,7 +52,7 @@ val String.stringAllInfoValueVal
 
 fun main() {
     val str: String = "ABC"
-    println(str.myInfo)
+    println("值：$str")
     //背后逻辑 showPrintln(showPrintln(showPrintln(str)))
     str.showPrintln().showPrintln().showPrintln()
     //背后逻辑 showPrintln(showPrintln(showPrintln(getMyInfo(str))))
