@@ -12,6 +12,7 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+       val arrList = listOf("1000","2000","3000","1000")
+        println("判断值是否存在：" + arrList.stream().filter { "1000" == it }.findAny().isPresent)
     }
 }

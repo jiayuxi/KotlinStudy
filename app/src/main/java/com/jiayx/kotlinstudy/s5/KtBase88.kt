@@ -5,6 +5,7 @@ package com.jiayx.kotlinstudy.s5
 on 2022/4/12
 todo kotlin 枚举类定义函数学习
 代数数据类型(简称 ADT)：可以用来表示一组子类型的闭集。枚举就是一种简单的 ADT
+ 枚举的值，等价于 枚举本身
  */
 
 data class LimbsInfo(var limbsInfo: String, var length: Int) {

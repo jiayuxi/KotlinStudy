@@ -13,10 +13,20 @@ fun KtBase98.show() {
 }
 
 fun KtBase98.getInfo() = "name:${this.name},age:${this.age},sex:${this.sex}"
+
+// String 扩展函数
+fun String.addExtAction(number: Int) = this + "@".repeat(number)
+
+// String 扩展函数打印
+fun String.show() = println(this)
+
 fun main() {
     method01()
     KtBase98("王五", 20, '男').show()
     println(KtBase98("赵柳", 22, '女').getInfo())
+    println("kotlin".addExtAction(3))
+    println("java".addExtAction(4))
+    "学习kotlin扩展函数".show()
 }
 
 // 如果一个类定义有一个成员函数与一个扩展函数，而这两个函数又有相同的接收者类型、

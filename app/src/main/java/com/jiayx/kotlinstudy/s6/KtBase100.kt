@@ -16,6 +16,7 @@ private inline fun <I, O> I.mLet(lambda: (I) -> O) = lambda(this)
 
 fun main() {
  val p : Boolean = "C".mLet {
+     println("it : $it")
       true
   }
 }

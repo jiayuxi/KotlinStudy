@@ -62,7 +62,15 @@ class ProducerClass4 : Producer<WoMan> {
     }
 
 }
-
+/*
+ * 泛型默认情况下是：泛型的子类对象，不可以赋值给 泛型的父类对象
+ * 泛型默认情况下是：泛型的具体子类对象，不可以赋值给 泛型声明处的父类对象
+ * out: 泛型的子类对象，可以赋值给 泛型的父类对象
+ * out: 泛型的具体子类对象，可以赋值给 泛型声明处的父类对象
+ *
+ * 协变 父类泛型声明处 可以接收 子类泛型声明处
+ *
+ */
 fun main() {
     val producerClass1 : Producer<Animal> = ProducerClass1()
     val producerClass2 : Producer<Animal> = ProducerClass2()
@@ -71,4 +79,8 @@ fun main() {
     //默认情况下，泛型的子类对象不能赋值给泛型父类对象
     // out (? extends T): 泛型的子类对象，可以赋值给泛型的父类对象
     // 协变 父类泛型声明处 可以接收 子类泛型声明处
+    producerClass1.producer()
+    producerClass2.producer()
+    producerClass3.producer()
+    producerClass4.producer()
 }
