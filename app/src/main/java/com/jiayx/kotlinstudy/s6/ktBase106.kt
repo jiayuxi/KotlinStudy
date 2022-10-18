@@ -18,7 +18,8 @@ inline fun Context.apply5(lambda: Context.(String) -> Unit): Context {
     lambda(info)
     return this
 }
-inline fun<I> I.apply6(lambda:I.(String) -> Unit):I {
+
+inline fun <I> I.apply6(lambda: I.(String) -> Unit): I {
     lambda("kotlin")
     return this
 }

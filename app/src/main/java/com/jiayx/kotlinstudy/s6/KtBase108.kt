@@ -15,10 +15,14 @@ fun main() {
         listOf<List<String>>(listOf("$it 学习kotlin", "$it 学习flatMap"))
     }
     // 返回集合
-    val newList1 = listOf.flatMap {
-        listOf("$it 学习kotlin", "$it 学习flatMap")
+    val newList1 = listOf.map {
+        "$it 学习kotlin"
+    }.map {
+        "$it 学习flatMap"
+    } .flatMap {
+        listOf(it)
     }
     println(newList)
     println()
-    println(newList)
+    println(newList1)
 }

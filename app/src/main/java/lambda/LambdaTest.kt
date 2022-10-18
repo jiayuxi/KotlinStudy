@@ -10,6 +10,7 @@ lambda 学习
 fun main() {
 //    lambda函数()
     函数方式()
+
 }
 
 /**
@@ -134,25 +135,28 @@ fun `函数方式`() {
     println(result)
 
     // 三数相加
-   val result1 = sum(12,25,26){t1,t2,t3 ->
+    val result1 = sum(12, 25, 26) { t1, t2, t3 ->
         t1 + t2 + t3
     }
     println("三数相加：$result1")
     // 三数相乘
-    val result2 = sum(12,25,26){t1,t2,t3 ->
+    val result2 = sum(12, 25, 26) { t1, t2, t3 ->
         t1 * t2 * t3
     }
     println("三数相乘：$result2")
     // 三数相除
-    val result3 = sum(100,25,26){t1,t2,t3 ->
+    val result3 = sum(100, 25, 26) { t1, t2, t3 ->
         t1 / t2 / t3
     }
     println("三数相除：$result3")
     // 三数相减
-    val result4 = sum(100,25,26){t1,t2,t3 ->
+    val result4 = sum(100, 25, 26) { t1, t2, t3 ->
         t1 - t2 - t3
     }
     println("三数相减：$result4")
+    //
+    "123".function()
+    123.function()
 }
 
 /**
@@ -160,7 +164,7 @@ fun `函数方式`() {
  * 扩展函数 对谁扩展 this == 谁本身
  */
 
-fun <T> T.function() = run { println("谁是调用者: $this") }
+inline fun <T> T.function() = run { println("谁是调用者: $this") }
 
 /**
  * 扩展函数

@@ -15,7 +15,7 @@ todo kotlin 语言 apply 函数详解
 // lambda() 默认就有this
 // 返回 this 的目的 可以进行链式调用
 private inline fun <I> I.myApply(lambda: I.() -> Unit): I {
-    lambda()
+    lambda()// 省略 this
     return this
 }
 
@@ -23,7 +23,9 @@ fun main() {
     File("D:\\file.txt").myApply {
         setReadable(true)
         setWritable(true)
+        println("value: ${readLines()}")
     }
+    println()
     // 分解函数
     //1、定义扩展函数
     fun File.ext(): Unit {
@@ -32,5 +34,7 @@ fun main() {
     //2、给 block变量赋值
     var block = File::ext
     //传入 apply 函数
-    File("D:\\file.txt").apply { block }
+    File("D:\\file.txt").apply { block
+        println("value: ${readLines()}")
+    }
 }
